@@ -622,6 +622,11 @@ public class MapOverlay extends StyleableLayer implements Serializable, ExtentIn
      */
     @Override
     public List<Feature> getClicked(final float x, final float y, final ViewBox viewBox) {
+
+        /** Themis-#729 */
+        Log.i("Themis-#729", "Step 2: Clicked a position on the map.");
+        /** Themis-#729 */
+
         List<Feature> result = new ArrayList<>();
         Log.d(DEBUG_TAG, "getClicked");
         if (data != null) {

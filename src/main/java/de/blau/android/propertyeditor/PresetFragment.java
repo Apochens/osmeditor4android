@@ -233,6 +233,11 @@ public class PresetFragment extends BaseFragment implements PresetUpdate, Preset
         if (term == null || "".equals(term.trim())) {
             return false;
         }
+
+        /** Themis-#729 */
+        Log.i("Themis-#729", "Step 6: Searched in preset fragment with term: " + term + ". The crash will occur.");
+        /** Themis-#729 */
+
         final FragmentManager fm = getChildFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
         Fragment prev = fm.findFragmentByTag(FRAGMENT_PRESET_SEARCH_RESULTS_TAG);

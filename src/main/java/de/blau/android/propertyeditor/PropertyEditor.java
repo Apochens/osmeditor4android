@@ -199,6 +199,11 @@ public class PropertyEditor extends BugFixedAppCompatActivity implements Propert
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
+
+        /** Themis-#729 */
+        Log.i("Themis-#729", "Step 4: Turned to property editor.");
+        /** Themis-#729 */
+
         int currentItem = -1; // used when restoring
         prefs = new Preferences(this);
         if (prefs.lightThemeEnabled()) {
@@ -661,6 +666,13 @@ public class PropertyEditor extends BugFixedAppCompatActivity implements Propert
     private class PageChangeListener extends ViewPager.SimpleOnPageChangeListener {
         @Override
         public void onPageSelected(int page) {
+
+            /** Themis-#729 */
+            if (page == 0) {
+                Log.i("Themis-#729", "Step 5: Turned to \"Presets\" page in property editor.");
+            }
+            /** Themis-#729 */
+
             Log.d(DEBUG_TAG, "page " + page + " selected");
             if (formEnabled && page == tagFormFragmentPosition && tagFormFragment != null) {
                 tagFormFragment.update();

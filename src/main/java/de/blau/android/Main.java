@@ -1266,11 +1266,21 @@ public class Main extends FullScreenAppCompatActivity
                 int[] drawableState = ((FloatingActionButton) b).getDrawableState();
                 Log.d(DEBUG_TAG, "Lock state length " + drawableState.length + " " + (drawableState.length == 1 ? Integer.toHexString(drawableState[0]) : ""));
                 if (drawableState.length == 0 || drawableState[0] != android.R.attr.state_pressed) {
+
+                    /** Themis-#729 */
+                    Log.i("Themis-#729", "Step 1: Clicked the \"unlock\" floating button to unlock the map.");
+                    /** Themis-#729 */
+
                     Mode mode = Mode.modeForTag((String) b.getTag());
                     logic.setMode(Main.this, mode);
                     ((FloatingActionButton) b).setImageState(new int[] { android.R.attr.state_pressed }, false);
                     logic.setLocked(false);
                 } else {
+
+                    /** Themis-#729 */
+                    Log.i("Themis-#729", "Warning 1: Clicked the \"unlock\" floating button twice to lock the map.");
+                    /** Themis-#729 */
+
                     logic.setLocked(true);
                     ((FloatingActionButton) b).setImageState(new int[] { 0 }, false);
                 }
@@ -1302,6 +1312,11 @@ public class Main extends FullScreenAppCompatActivity
                         item.setOnMenuItemClickListener(new OnMenuItemClickListener() {
                             @Override
                             public boolean onMenuItemClick(MenuItem item) {
+
+                                /** Themis-#729 */
+                                Log.i("Themis-#729", "Step 3: Selected a item in the popup list.");
+                                /** Themis-#729 */
+
                                 logic.setMode(Main.this, newMode);
                                 b.setTag(newMode.tag());
                                 StateListDrawable states = new StateListDrawable();
