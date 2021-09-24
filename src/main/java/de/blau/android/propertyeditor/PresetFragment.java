@@ -235,7 +235,7 @@ public class PresetFragment extends BaseFragment implements PresetUpdate, Preset
         }
 
         /** Themis-#729 */
-        Log.i("Themis-#729", "Step 6: Searched in preset fragment with term: " + term + ". The crash will occur.");
+        Log.i("Themis", "Step 6: Searched in preset fragment with term: " + term + ". The crash will occur.");
         /** Themis-#729 */
 
         final FragmentManager fm = getChildFragmentManager();

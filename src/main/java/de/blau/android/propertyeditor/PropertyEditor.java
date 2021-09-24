@@ -201,7 +201,7 @@ public class PropertyEditor extends BugFixedAppCompatActivity implements Propert
     protected void onCreate(final Bundle savedInstanceState) {
 
         /** Themis-#729 */
-        Log.i("Themis-#729", "Step 4: Turned to property editor.");
+        Log.i("Themis", "Step 4: Turned to property editor.");
         /** Themis-#729 */
 
         int currentItem = -1; // used when restoring
@@ -669,7 +669,7 @@ public class PropertyEditor extends BugFixedAppCompatActivity implements Propert
 
             /** Themis-#729 */
             if (page == 0) {
-                Log.i("Themis-#729", "Step 5: Turned to \"Presets\" page in property editor.");
+                Log.i("Themis", "Step 5: Turned to \"Presets\" page in property editor.");
             }
             /** Themis-#729 */
 

@@ -1268,7 +1268,7 @@ public class Main extends FullScreenAppCompatActivity
                 if (drawableState.length == 0 || drawableState[0] != android.R.attr.state_pressed) {
 
                     /** Themis-#729 */
-                    Log.i("Themis-#729", "Step 1: Clicked the \"unlock\" floating button to unlock the map.");
+                    Log.i("Themis", "Step 1: Clicked the \"unlock\" floating button to unlock the map.");
                     /** Themis-#729 */
 
                     Mode mode = Mode.modeForTag((String) b.getTag());
@@ -1278,7 +1278,7 @@ public class Main extends FullScreenAppCompatActivity
                 } else {
 
                     /** Themis-#729 */
-                    Log.i("Themis-#729", "Warning 1: Clicked the \"unlock\" floating button twice to lock the map.");
+                    Log.i("Themis", "Warning 1: Clicked the \"unlock\" floating button twice to lock the map.");
                     /** Themis-#729 */
 
                     logic.setLocked(true);
@@ -1314,7 +1314,7 @@ public class Main extends FullScreenAppCompatActivity
                             public boolean onMenuItemClick(MenuItem item) {
 
                                 /** Themis-#729 */
-                                Log.i("Themis-#729", "Step 3: Selected a item in the popup list.");
+                                Log.i("Themis", "Step 3: Selected a item in the popup list.");
                                 /** Themis-#729 */
 
                                 logic.setMode(Main.this, newMode);
