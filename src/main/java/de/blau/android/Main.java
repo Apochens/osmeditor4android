@@ -1268,7 +1268,7 @@ public class Main extends FullScreenAppCompatActivity
                 if (drawableState.length == 0 || drawableState[0] != android.R.attr.state_pressed) {
 
                     /** Themis-#729 */
-                    Log.i("Themis", "Step 1: Clicked the \"unlock\" floating button to unlock the map.");
+                    Log.i("Themis", "Event 1: Clicked the \"unlock\" floating button to unlock the map.");
                     /** Themis-#729 */
 
                     Mode mode = Mode.modeForTag((String) b.getTag());
@@ -1312,11 +1312,6 @@ public class Main extends FullScreenAppCompatActivity
                         item.setOnMenuItemClickListener(new OnMenuItemClickListener() {
                             @Override
                             public boolean onMenuItemClick(MenuItem item) {
-
-                                /** Themis-#729 */
-                                Log.i("Themis", "Step 3: Selected a item in the popup list.");
-                                /** Themis-#729 */
-
                                 logic.setMode(Main.this, newMode);
                                 b.setTag(newMode.tag());
                                 StateListDrawable states = new StateListDrawable();
@@ -3608,6 +3603,11 @@ public class Main extends FullScreenAppCompatActivity
                             doubleTap = false;
                             getEasyEditManager().startExtendedSelection(element);
                         } else {
+
+                            /** Themis-#729 */
+                            Log.i("Themis", "Event 3: Selected a item in the popup list.");
+                            /** Themis-#729 */
+
                             getEasyEditManager().editElement(element);
                         }
                     } else if (mode.elementsEditable()) {

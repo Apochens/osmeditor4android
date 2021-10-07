@@ -235,7 +235,7 @@ public class PresetFragment extends BaseFragment implements PresetUpdate, Preset
         }
 
         /** Themis-#729 */
-        Log.i("Themis", "Step 6: Searched in preset fragment with term: " + term + ". The crash will occur.");
+        Log.i("Themis", "Event 6: Searched in preset fragment with term: " + term + ".");
         /** Themis-#729 */
 
         final FragmentManager fm = getChildFragmentManager();
@@ -260,7 +260,13 @@ public class PresetFragment extends BaseFragment implements PresetUpdate, Preset
 
             @Override
             protected ArrayList<PresetElement> doInBackground(Void... params) {
-                presetSearch.setEnabled(false);
+                try {
+                    presetSearch.setEnabled(false);
+                } catch (RuntimeException e) {
+                    Log.i("Themis", "Crash!");
+                    throw e;
+                }
+
                 try {
                     ArrayList<PresetElement> searchResults = new ArrayList<>(SearchIndexUtils.searchInPresets(getActivity(), term, type, 2, MAX_SEARCHRESULTS));
                     Preferences prefs = new Preferences(getContext());
