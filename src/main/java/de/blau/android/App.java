@@ -112,7 +112,7 @@ public class App extends android.app.Application {
     @Override
     public void onCreate() {
         // The following line triggers the initialization of ACRA
-        ACRA.init(this);
+//        ACRA.init(this);
         super.onCreate();
         String appName = getString(R.string.app_name);
         String appVersion = getString(R.string.app_version);

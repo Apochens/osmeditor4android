@@ -263,7 +263,7 @@ public class PresetFragment extends BaseFragment implements PresetUpdate, Preset
                 try {
                     presetSearch.setEnabled(false);
                 } catch (RuntimeException e) {
-                    Log.i("Themis", "Crash!");
+                    Log.i("Themis", "Crash! RuntimeException");
                     throw e;
                 }
 
