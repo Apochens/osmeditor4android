@@ -235,7 +235,7 @@ public class PresetFragment extends BaseFragment implements PresetUpdate, Preset
         }
 
         /** Themis-#729 */
-        Log.i("Themis", "Event 6: Searched in preset fragment with term: " + term + ".");
+        Log.i("Themis", "Event 5: Searched in preset fragment with term: " + term + ".");
         /** Themis-#729 */
 
         final FragmentManager fm = getChildFragmentManager();

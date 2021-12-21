@@ -3604,9 +3604,9 @@ public class Main extends FullScreenAppCompatActivity
                             getEasyEditManager().startExtendedSelection(element);
                         } else {
 
-                            /** Themis-#729 */
-                            Log.i("Themis", "Event 3: Selected a item in the popup list.");
-                            /** Themis-#729 */
+//                            /** Themis-#729 */
+//                            Log.i("Themis", "Event 3: Selected a item in the popup list.");
+//                            /** Themis-#729 */
 
                             getEasyEditManager().editElement(element);
                         }
